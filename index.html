@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object model</title>
+</head>
+<body>
+    <!-- option 1 -->
+    <h1>dom doma dom events</h1>
+     <!-- option 1 for event handler -->
+    <button onclick="console.log(7)">click me</button><br>
+     <button onclick="console.log(24)" >another button</button>
+     <input type="text" name="" id="">
+     <button onclick="console.log('restart')">third button</button>
+  <!-- event click handler 2 -->
+  <button onclick="makeYellow()">make yellow</button>
+  <button onclick="makeRed()">make red</button>
+  <button onclick="sayeed()">sayeed</button>
+
+ <br>
+ <button id="btn-make-blue">make blue</button>
+ <button id="bou">shila</button>
+ <button id="candidate">tanvir</button>
+ <button id="btn-make-purple">make purple</button>
+
+
+
+
+
+  <!-- option 4 add event listener -->
+   <button id="btn-make-green">make green</button>
+   <button id="btn-make-gold">make gold</button>
+  <script>
+   // document.getelementbyid.addeventListener
+   document.getElementById('btn-make-green').addEventListener('click',function makeGreen(){
+    //console.log(777);
+    document.body.style.background='green';
+   })
+    document.getElementById('btn-make-gold').addEventListener('click',function makeGold(){
+        document.body.style.background='gold';
+    } )
+
+  </script>
+
+    <script src="js/events.js"></script>
+</body>
+</html>
