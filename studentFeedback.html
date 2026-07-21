@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student feedback</title>
+    <style>
+        .feedback{
+            border: 2px solid red;
+            background-color: aqua;
+            margin: 2px;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .feedback_container_design{
+            border: 2px solid red;
+            background-color: aqua;
+            margin: 2px;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="feedback">student feedback</h1>
+    <br><br>
+    <label >Name:</label>
+    <br><br>
+    <input id="student-name" placeholder="Enter your name" type="text">
+    <br><br>
+    <label >feedback:</label><br><br>
+    
+    <textarea name="" id="feedback-box-comment" cols="60" rows="5"></textarea>
+    <br><br>
+    <button id="btn-submit">submit</button>
+    <br><br>
+    <h2>All feedback here:</h2>
+    <div id="feedback_container" class="feedback_container_design">
+
+    </div>
+    <script>
+        document.getElementById('btn-submit').addEventListener('click',function(){
+            // get student name
+            const inputName=document.getElementById('student-name');
+           
+            const studentName=inputName.value;
+            // get feedback
+            const feedbackInput=document.getElementById('feedback-box-comment');
+            const feedback=feedbackInput.value;
+            // parent container
+            const container=document.getElementById('feedback_container');
+            // create new div
+            const feedbackCard=document.createElement('div');
+            // add content
+            feedbackCard.innerText='student:'+studentName+ "\nfeedback:"+feedback;
+            container.appendChild(feedbackCard)
+            // clear input
+            inputName.value="";
+            feedbackInput.value="";
+
+        })
+    </script>
+</body>
+</html>
