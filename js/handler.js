@@ -15,17 +15,17 @@ document.getElementById('btn-update-title').addEventListener('click',function(){
 
 //    set event listener
 
-    document.getElementById('btn-name').addEventListener('click',function(){
-        console.log('click the name button');
-        // get the text from the input field
+    // document.getElementById('btn-name').addEventListener('click',function(){
+    //     console.log('click the name button');
+    //     // get the text from the input field
 
-       const inputName=document.getElementById('name-input');
-       console.log('inputName');
-       const name1=inputName.value;
-       console.log('name',name1);
+    //    const inputName=document.getElementById('name-input');
+    //    console.log('inputName');
+    //    const name1=inputName.value;
+    //    console.log('name',name1);
 
-       //set the name
-       const namP=document.getElementById('');
-       namP.innerText=name;
-    })
+    //    //set the name
+    //    const namP=document.getElementById('');
+    //    namP.innerText=name;
+    // })
      
