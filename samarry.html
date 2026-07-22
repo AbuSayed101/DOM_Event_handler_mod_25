@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom events sammary</title>
+</head>
+<body>
+    <h1>Dom Events Summary</h1>
+    <input id="name-input" type="text" placeholder="your name">
+    <button onclick="addName()">add name</button>
+    <div id="name-container">
+
+    </div>
+    <script>
+        function addName(){
+            console.log('button click');
+           const nameInput=document.getElementById('name-input');
+           const newName=nameInput.value;
+        //  parent
+        const nameContainer=document.getElementById('name-container');
+        // create p
+        const p=document.createElement('p')
+        p.innerText=newName;
+        // append child
+        nameContainer.appendChild(p);
+        nameInput.value='';
+        
+        }
+    </script>
+</body>
+</html>
