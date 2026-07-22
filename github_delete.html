@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Delete</title>
+</head>
+
+
+
+
+
+
+
+<body>
+    <h1 id="secret-info">My secret info</h1>
+    <input id="input-delete" placeholder="Write delete" type="text">
+    <button id="btn-delete" disabled>Delete</button>
+    <br><br>
+
+
+<h1>Project #7 show/hide password</h1>
+<p>password:</p>
+<input id="input-password" placeholder="write password" type="password">
+<input type="checkbox" name="" id="input-checkbox" value="">
+<label id="input-label" for="input-checkbox" >show password</label>
+
+<br><br><br>
+
+<h1>My Account Information</h1>
+<div id="account-info">My account details:</div><br>
+<input id="confirm-input" type="text">
+<button id="btn-delete" disabled>Delete Account</button>
+
+
+<script>
+document.getElementById('confirm-input').addEventListener('keyup',function(event){
+    const text=event.target.value;
+    const btnDelete=document.getElementById('btn-delete');
+    // console.log('text');
+    if(text==='delete'){
+        console.log('delete type');
+     btnDelete.removeAttribute('disabled');
+    }
+    else{
+        console.log('something else');
+        btnDelete.setAttribute('disabled',true);
+    }
+})
+
+
+
+// project one javascript is here to start
+    document.getElementById('input-delete').addEventListener('keyup', function (event) {
+        const text = event.target.value;
+        const btnDelete = document.getElementById('btn-delete');
+        if (text == 'delete') {
+            console.log('delete typed');
+            btnDelete.removeAttribute('disabled');
+            const secretTag = document.getElementById('secret-info');
+            secretTag.style.display = 'none';
+            // const btnDelete=document.getElementById('btn-delete');
+            // btnDelete.style.display='none';
+        }
+        else {
+            console.log('something else');
+            btnDelete.setAttribute('disabled', true);
+        }
+    })
+
+
+
+
+
+ const password=document.getElementById('input-password');
+ const checkbox=document.getElementById('input-checkbox');
+ const label=document.getElementById('input-label');
+
+ checkbox.addEventListener('click',function(){
+    if(checkbox.checked){
+        password.type="text";
+        label.innerText="hide password";
+    }
+    else{
+        password.type="password";
+        label.innerText="show password";
+    }
+    
+ })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</script>
+
+</body>
+</html>

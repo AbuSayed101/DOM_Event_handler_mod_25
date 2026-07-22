@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br><br><br>
+    <!-- html part -->
+    <h1>My Account Information</h1>
+    <div id="account-info">My account details:</div><br>
+    <input id="confirm-input" type="text">
+    <button id="btn-delete" disabled>Delete Account</button>
+    <script>
+        // call korlam input portion tuku 
+    document.getElementById('confirm-input').addEventListener('keyup', function (event) {
+        //ki likha ache input portion a  track korlam
+        const text = event.target.value;
+        //  button er opor condition make krlam
+        const btnDelete = document.getElementById('btn-delete');
+        // console.log('text');
+        if (text === 'delete') {
+            console.log('delete type');
+            btnDelete.removeAttribute('disabled');
+        }
+        else {
+            console.log('something else');
+            btnDelete.setAttribute('disabled', true);
+        }
+    })
+
+    </script>
+
+</body>
+</html>
